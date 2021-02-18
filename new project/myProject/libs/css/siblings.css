@@ -1,0 +1,111 @@
+/* this is just for testing */
+
+body h1 {
+    color: gray;
+}
+
+table {
+    font-family: serif;
+    font-size: 20px;
+}
+
+/* This is an interesting way to coustem select tag */
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #2c3e50;
+    background-image: none;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  .select {
+    width: 6em;
+    height: 2.5em;
+    line-height: 1;
+    background: #2c3e50;
+    overflow: hidden;
+    border-radius: .25em;
+    text-align: center;
+  }
+  select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+  }
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34495e;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  .select:hover::after {
+    color: #f39c12;
+  }
+  
+
+
+
+/* here i tried to make a simple button knowing that the CSS IS NOT the focus */
+
+.BUTTON {   
+    text-align: center;
+    cursor: pointer;
+    font-size:18px;
+    margin: 0 0 0 30px;
+    border-radius: .9em;
+  }
+
+.BUTTON  {
+        position: relative;
+        background-color: #f39c12;
+        border: none;
+        padding: 7px;
+        width: 80px;
+        text-align: center;
+        -webkit-transition-duration: 2s; 
+        transition-duration: 2s;
+        text-decoration: none;
+        overflow: hidden;
+}
+  
+.BUTTON:hover{
+    background: #c2f312;
+    box-shadow:0px 2px 10px 5px #97B1BF;
+    color:#000;
+ }
+ 
+ .BUTTON:after {
+     content: "";
+     background:#beedb9;
+     display: block;
+     position: absolute;
+     padding-top: 300%;
+     padding-left: 350%;
+     margin-left: -20px !important;
+     margin-top: -120%;
+     opacity: 0;
+     transition: all 2s
+ }
+ 
+ .BUTTON:active:after {
+     padding: 0;
+     margin: 0;
+     opacity: 1;
+     transition: 0s
+ }
+

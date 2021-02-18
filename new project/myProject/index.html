@@ -1,0 +1,155 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Project</title>
+        <meta name="description" content="AJAX/PHP/CURL/JSON">
+        <meta name="viewport" content="width=device=width, initial-scale=1"> 
+        
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="../myProject/libs/css/siblings.css">
+        <link rel="stylesheet" href="../myProject/libs/css/weather.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      
+
+    </head>
+
+    <body>
+
+        <!-- ---------This is the Timezone API----------- -->
+
+
+        <h1>This API will show you a Country timezone by chosing latitude and longitude</h1>
+        
+        <select class="select" id="lat">
+            <option value="45.83">Romania lat</option>
+            <option value="47.01">Austria lat</option>
+            <option value="46.63">France lat</option>
+        </select>
+
+        <select class="select" id="lng">
+            <option value="25.0">Romania lng</option>
+            <option value="10.2">Austria lng</option>
+            <option value="2.33">France lng</option>
+        </select>
+
+        <button class="BUTTON" id="BUTTON1">START</button>
+
+        <br><br>
+
+        <div id="divResults">
+            
+            <table>
+
+                <tr>
+                    <td>timezoneId : </td> 
+                    <td id="timezoneId"></td>
+ 
+                </tr>
+
+                <tr>
+                    <td>time:  </td>
+                    <td id="time"></td>    
+
+                </tr>
+
+                <tr>
+                    <td>sunrise:</td> 
+                    <td id="sunrise"></td>    
+
+                </tr>
+
+                <tr>
+                    <td>sunset: </td>
+                    <td id="sunset"></td>    
+
+                </tr>
+
+
+            </table>
+
+        </div>
+
+
+             <!-- ---------This is the Sibling API----------- -->
+
+
+
+             <h1>Chose a country to see it`s neighbour</h1>
+             <select class="select" id="geonameId">
+                 <option value="2782113">Austria</option>
+                 <option value="3017382">France</option>
+                 <option value="2921044">Germany</option>
+                 <option value="617790">Moldova</option>
+                 <option value="3194884">Montenegro</option>
+                 <option value="3144096">Norway</option>
+                 <option value="2017370">Russian </option>
+             </select>
+     
+             <button class="BUTTON" id="BUTTON2">START</button>
+     
+             <br><br>
+     
+             <div id="divResults">
+                 
+                 <table class="table">
+     
+                     <tr class="table-primary">
+                         <td class="table-primary">latitude : </td> 
+                         <td class="table-primary" id="lati"></td>
+      
+                     </tr>
+     
+                     <tr class="table-secondary">
+                         <td class="table-secondary">longitude:  </td>
+                         <td class="table-secondary" id="lngi"></td>    
+     
+                     </tr>
+     
+                     <tr class="table-success">
+                         <td class="table-success">countryCode:</td> 
+                         <td class="table-success" id="countryCode"></td>    
+     
+                     </tr>
+     
+                     <tr class="table-danger">
+                         <td class="table-danger">countryName: </td>
+                         <td class="table-danger" id="countryName"></td>    
+     
+                     </tr>
+                     <tr class="table-warning">
+                         <td class="table-warning">toponymName:</td> 
+                         <td class="table-warning" id="toponymName"></td>     
+     
+                     </tr>
+     
+                 </table>
+     
+             </div> 
+            
+             <br><br><br>
+               <!-- ------ this is a jquery only API  --- -->
+
+
+               <h1>This is a JQUERY - only API</h1>
+
+
+            <div class="weather-container">
+                <img src="" alt="" class="icon">
+                <p class="weather">London Today's weather:  </p>
+                <p class="temp">London temperature in celsius:  </p>
+            </div>
+
+
+        <script  src="libs/js/jquery.js"></script>
+        <script  src="libs/js/siblings.js"></script>
+        <script  src="libs/js/timezone.js"></script>
+        <script src="libs/js/weather.js"></script>
+
+    </body>
+
+</html>
+
